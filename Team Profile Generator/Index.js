@@ -204,5 +204,5 @@ function generateHTML()
         htmlData += generateTeamMemberhtml(teamMembers[a]);
     }
     htmlData += generateFinalhtml();
-    fs.writeFileSync(generateFinalhtml, htmlData);
+    fs.writeFileSync(generatedhtml, htmlData);
 }
