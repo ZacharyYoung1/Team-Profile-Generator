@@ -152,8 +152,46 @@ function evaluateAdditionalTeamMemberResult(result)
         generateHTML();
     }
 }
+function generateInitialHTML(){
+    return `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team Profile</title>
+        <link rel="stylesheet" href="teamProfile.css">
+        
+        
+    </head>
+    
+    <body>
+        <div class="teamNavBar">
+            <h2>My Team</h2>
+        </div>
+    <div class="cardBody">`
+}
+
+function generateTeamMemberhtml(teamMember){
+
+}
+function generateFinalhtml(){
+    return `</div>
+  
+
+    </body>
+    
+    </html>`;
+}
 
 function generateHTML()
 {
     fs.writeFileSync(generatedhtml, "");
+    let htmlData = generateInitialHTML();
+    for(var a in teamMembers)
+    {
+        htmlData += generateTeamMemberhtml(teamMembers[a]);
+    }
+    htmlData += generateFinalhtml();
+    fs.writeFileSync(generateFinalhtml, htmlData);
 }
