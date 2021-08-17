@@ -173,8 +173,19 @@ function generateInitialHTML(){
 }
 
 function generateTeamMemberhtml(teamMember){
-
+return `<div class="teamMemberCard">
+<div class= "teamMemberTitle">
+    <h3>${teamMember.getName()} - ${teamMember.getRole()}</h3>
+</div>
+<div class="teamMemberBody"></div>
+<ul>
+<li>ID:${teamMember.getID()}</li>
+<li>Email: ${teamMember.getEmail()}</li>
+${teamMember.getRolehtml()}
+</ul>
+</div>`
 }
+
 function generateFinalhtml(){
     return `</div>
   
