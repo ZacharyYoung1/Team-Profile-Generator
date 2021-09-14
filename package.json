@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "fs": "*",
-    "inquirer": "^8.1.2"
-  }
-}

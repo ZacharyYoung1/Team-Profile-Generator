@@ -11,9 +11,6 @@ class Engineer extends Employee {
     getRole() {
         return "Engineer"
     }
-    getRolehtml(){
-        return `<li>Github: <a href="https://github.com/${this.getGithub()}>${this.getGithub()}</a></li>`
-    }
 }
 
 
